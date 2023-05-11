@@ -114,6 +114,12 @@ removeSkill(index: number) {
 }
 
 onSubmit2() {
+  if(this.form2.invalid){
+    this.notificationService.showError('Please fill all the details !!', 'Error');
+    return;
+  }
+  this.notificationService.showSuccess('Data shown successfully !!', 'Success');
+
   console.log(this.form2.value);
   this.test2=true
   // any additional logic here to handle the form submission
@@ -138,6 +144,12 @@ removeexp(index: number) {
 }
 
 onSubmit3() {
+  if(this.form3.invalid){
+    this.notificationService.showError('Please fill all the details !!', 'Error');
+    return;
+  }
+  this.notificationService.showSuccess('Data shown successfully !!', 'Success');
+
   console.log(this.form3.value);
   // any additional logic here to handle the form submission
   this.test3=true
@@ -162,6 +174,12 @@ removeed(index: number) {
 }
 
 onSubmit4() {
+  if(this.form4.invalid){
+    this.notificationService.showError('Please fill all the details !!', 'Error');
+    return;
+  }
+  this.notificationService.showSuccess('Data shown successfully !!', 'Success');
+
   console.log(this.form4.value);
   // any additional logic here to handle the form submission
   this.test4=true
@@ -199,6 +217,12 @@ eventhand1(event :any, i: number){
 onSubmit5(){
   console.log(this.form5.value.portfolio);
   this.test5=true
+  if(this.form5.invalid){
+    this.notificationService.showError('Please fill all the details !!', 'Error');
+    return;
+  }
+  this.notificationService.showSuccess('Data shown successfully !!', 'Success');
+
 }
 
 // onSubmit5(){

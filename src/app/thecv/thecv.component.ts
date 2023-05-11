@@ -29,4 +29,8 @@ cv(){
   html2pdf().set(options).from(element).save();
 
 }
+
+
+
+
 }

@@ -22,6 +22,7 @@ form=new FormGroup({
 signup(){
   this.auth.signup(this.form.value).subscribe((data:any)=>{
     console.log(data)
+    alert('signed up successfullt')
     this.route.navigate(['/login'])
   })
 

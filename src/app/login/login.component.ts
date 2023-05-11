@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.forms.value).subscribe((data:any)=>{
       console.log(data)
       localStorage.setItem("token",data.token)
+      alert('signed in successfullt')
+
       this.route.navigate(["/pick"])
     })
 
