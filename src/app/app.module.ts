@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -31,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AboutMeFormComponent } from './Forms/about-me-form/about-me-form.component';
 import { CvtemplateoneComponent } from './cvtemplateone/cvtemplateone.component';
 import { CvtemplatetwoComponent } from './cvtemplatetwo/cvtemplatetwo.component';
+import { ChooseComponent } from './choose/choose.component';
 
 @NgModule({
   declarations: [
@@ -60,13 +62,14 @@ import { CvtemplatetwoComponent } from './cvtemplatetwo/cvtemplatetwo.component'
     AboutMeFormComponent,
     CvtemplateoneComponent,
     CvtemplatetwoComponent,
+    ChooseComponent,
     
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),

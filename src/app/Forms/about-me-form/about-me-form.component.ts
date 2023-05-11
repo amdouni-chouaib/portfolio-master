@@ -15,6 +15,15 @@ export class AboutMeFormComponent implements OnInit {
   form3:FormGroup
   form4:FormGroup
   form5:FormGroup
+  test:any=false
+  test1:any=false
+  test2:any=false
+  test3:any=false
+  test4:any=false
+  test5:any=false
+  one:number=0
+  two:number=0
+
   constructor(private route:Router,private formBuilder:FormBuilder,private notificationService:NotificationService){
     this.form2 = this.formBuilder.group({
       skillsArray: this.formBuilder.array([
@@ -57,7 +66,16 @@ export class AboutMeFormComponent implements OnInit {
   
   }
   ngOnInit(): void {
-    
+    console.log(this.notificationService.pick.one)
+    this.one=this.notificationService.pick.one
+    this.two=this.notificationService.pick.two
+  }
+  checking(){
+    if(this.one===1){
+      return 1
+    }else{
+      return 2
+    }
   }
   dataport:any=''
   imgport:any=""
@@ -97,7 +115,7 @@ removeSkill(index: number) {
 
 onSubmit2() {
   console.log(this.form2.value);
-
+  this.test2=true
   // any additional logic here to handle the form submission
 }
 
@@ -122,6 +140,7 @@ removeexp(index: number) {
 onSubmit3() {
   console.log(this.form3.value);
   // any additional logic here to handle the form submission
+  this.test3=true
 }
 
 get education() {
@@ -145,6 +164,7 @@ removeed(index: number) {
 onSubmit4() {
   console.log(this.form4.value);
   // any additional logic here to handle the form submission
+  this.test4=true
 }
 
 get portfolio() {
@@ -178,6 +198,7 @@ eventhand1(event :any, i: number){
 
 onSubmit5(){
   console.log(this.form5.value.portfolio);
+  this.test5=true
 }
 
 // onSubmit5(){
@@ -203,6 +224,7 @@ onSubmit5(){
     console.log("onSubmit")
     console.log(this.form.value);
     this.notificationService.showSuccess('Data shown successfully !!', 'Success');
+    this.test=true
   }
   onSubmit1() {
     if(this.form1.invalid){
@@ -215,6 +237,7 @@ onSubmit5(){
     console.log(this.data);
 
     this.notificationService.showSuccess('Data shown successfully !!', 'Success');
+    this.test1=true
   }
   eventhand(event :any){
     if (event.target.files && event.target.files[0]) {
@@ -239,9 +262,15 @@ sendData(){
 
     this.notificationService.data.header=this.data
 
+    if(this.one===1){
 
-    this.route.navigate(['/portfolioone'])
+      this.route.navigate(['/portfolioone'])
 
+    }else{
+      this.route.navigate(['/portfoliotwo'])
+
+
+    }  
 }
 
 

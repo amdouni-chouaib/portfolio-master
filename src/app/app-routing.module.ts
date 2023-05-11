@@ -20,12 +20,16 @@ import { RegisterComponent } from './register/register.component';
 import { GeneratorsComponent } from './generators/generators.component';
 import { CvtemplateoneComponent } from './cvtemplateone/cvtemplateone.component';
 import { ThecvComponent } from './thecv/thecv.component';
+import { ChooseComponent } from './choose/choose.component';
+import { CvtemplatetwoComponent } from './cvtemplatetwo/cvtemplatetwo.component';
 
 const routes: Routes = [
   {path:"portfolioone",component:CvtemplateoneComponent},
-  {path:"container",component:ContainerComponent},
+  {path:"portfoliotwo",component:CvtemplatetwoComponent},
 
- 
+  {path:"container",component:ContainerComponent},
+  {path:"pick",component:ChooseComponent},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
     {path:"aboutmeone",component:AboutmeoneComponent},
     {path:"education",component:EducationmeoneComponent},
     {path:"experience",component:ExperiencemeoneComponent},

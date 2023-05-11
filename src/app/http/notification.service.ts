@@ -29,6 +29,11 @@ export class NotificationService {
     portfolio:1
   };
 
+  pick={
+    one:0,
+    two:0
+  }
+
   
 
 }

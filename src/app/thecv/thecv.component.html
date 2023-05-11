@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="resume-box" id="w">
 	<div class="left-section">
 		<div class="profile">
@@ -91,7 +91,7 @@
 			<p class="p6">{{item.skills}}</p>
 			<div >{{item.level}}%</div>
 				
-		</div>
+		</div> -->
 		
 		<!-- <div class="clearfix"></div>
 		<br>
@@ -106,9 +106,93 @@
 		<img src="image/design.png" class="h-img">
 		<img src="image/chess.png" class="h-img"> -->
 
+		<!-- </div>
+
+
+		<div class="clearfix"></div>
+	</div>
+	 -->
+
+	<div class="box-outer" id="w">
+		<div class="resume-box">
+			<div class="box-1">
+				<img [src]="data1.header.picture" class="profile" style="border-color: #f19b23; border: 20px;"/>
+				<div class="content">
+				<h1>About me</h1>
+				<p>			{{data1.about.description}}				</p>
+	
+				<br/>
+				
+				<br/>
+				<h1>Contact</h1>
+	
+					<p><i class="fa fa-map"></i> &nbsp;{{data1.about.address}}</p>
+					<p><i class="fa fa-phone"></i> &nbsp;phone {{data1.about.phone}}</p>
+					<p><i class="fa fa-envelope"></i> &nbsp;email : {{data1.about.email}}</p>
+					<p>  <i class="fa fa-github"></i>&nbsp;GitHub : {{data1.about.link}}</p>
+					<p>  <i class="fa fa-language"></i>&nbsp;GitHub : {{data1.about.language}}</p>
+
+				</div>
+	
+			</div>
+	
+			<div class="box-2">
+				
+				<div class="intro">
+					
+					<br/>
+					<h1> <strong>{{data1.header.fullname}}</strong></h1>
+	
+					<p class="phead">{{data1.header.role}}</p>
+					<div class="clearfix"></div>
+					<hr class="hr1" />
+				</div>
+				
+				<br/><br/><br/>
+				<div class="content-2">
+					<h1 class="head">Experience</h1>
+					<hr class="hr2" />
+					<div class="clearfix"></div>
+				<div *ngFor="let item of data1.experience">
+					<p class="para-1">{{item.title}} <strong>{{item.dated}} - {{item.datef}}</strong></p>
+					<p class="para-21">{{item.description}}</p>
+				</div>
+					</div>
+	
+	
+				<div class="content-2">
+					<h1 class="head">Education</h1>
+					<hr class="hr2" />
+					<div class="clearfix"></div>
+					<div *ngFor="let item of data1.education">
+						
+						<p class="para-1">{{item.title1}} <strong>{{item.dated1}} - {{item.datef1}}</strong></p>
+						<p class="para-21">{{item.description1}}</p>
+		
+					</div>
+					
+					
+				</div>
+	
+				<h1 class="head">Skills</h1>
+				<hr class="hr2" />
+					<div class="clearfix"></div>
+					<div *ngFor="let item of data1.skills">
+
+						<div class="col-div-4"><p class="p25">{{item.skills}}</p></div>
+					<div class="col-div-6">
+						{{item.skills}} %
+					</div>
+					</div>
+				<div class="clearfix"></div>
+			
+			
+			
+	
+	
+			</div>
+	
 		</div>
-
-
 		<div class="clearfix"></div>
 	</div>
 	<div style="display: flex;justify-content: center;">

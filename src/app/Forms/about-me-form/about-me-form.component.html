@@ -26,15 +26,16 @@
           <div *ngIf="form1.get('link').errors['required']">link is required</div>
         </div>
         <br>
-        <button class="btn btn-secondary mt-4 "  type="submit">add</button>
+        <button class="btn btn-secondary mt-4 "   type="submit">add</button>
       </form>
     </div>
     </div>
-<app-mecv *ngIf="form1.valid" [data]="data"></app-mecv>
+
+      <app-mecv  *ngIf="test1 && one===1" [data]="data"></app-mecv>
+      <app-mecvone  *ngIf="test1 && one===2" [data]="data"></app-mecvone>
 
 
-
-<div *ngIf="form1.valid">
+<div *ngIf="test1">
   <div class="card" >
     <div class="card-body">
       <h5 class="card-title"><h1 class="text-center">About Me</h1> </h5>
@@ -84,7 +85,9 @@
       </form>
     </div>
     </div>
-  <app-aboutmeone *ngIf="form.valid" [data]="form.value"></app-aboutmeone>
+  <app-aboutmeone *ngIf="test && one===1" [data]="form.value"></app-aboutmeone>
+  <app-aboutme  *ngIf="test && one===2" [data]="form.value"></app-aboutme>
+
   
   
   
@@ -92,7 +95,7 @@
   
   
 </div>
-<div *ngIf="form.valid">
+<div *ngIf="test">
   <div class="card">
     <div class="card-body">
     <h5 class="card-title"><h1 class="text-center">Professional skills </h1></h5>
@@ -120,12 +123,14 @@
       </form>
     </div>
   </div>
-  <app-skillsme *ngIf="form2.valid" [data]="form2.value"></app-skillsme>
+  <app-skillsme *ngIf="test2 && one===1" [data]="form2.value"></app-skillsme>
+  <app-skillsmeone  *ngIf="test2 && one===2" [data]="form2.value"></app-skillsmeone>
+
 </div>
 
 
 
-<div *ngIf="form.valid">
+<div *ngIf="test2">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">
@@ -165,10 +170,12 @@
       </form>
     </div>
   </div>
-  <app-experienceme *ngIf="form3.valid" [data]="form3.value"></app-experienceme>
+  <app-experienceme *ngIf="test3 && one===1" [data]="form3.value"></app-experienceme>
+  <app-experiencemeone  *ngIf="test3 && one===2" [data]="form3.value"></app-experiencemeone>
+
 </div>
 
-<div *ngIf="form3.valid">
+<div *ngIf="test3">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title1">
@@ -208,10 +215,13 @@
       </form>
     </div>
   </div>
-  <app-educationme *ngIf="form4.valid" [data]="form4.value"></app-educationme>
+  <app-educationme *ngIf="test4 && one===1" [data]="form4.value"></app-educationme>
+  <app-educationmeone  *ngIf="test4 && one===2" [data]="form4.value"></app-educationmeone>
+
+  
 </div>
 
-<div *ngIf="form4.valid" >
+<div *ngIf="test4" >
   <div class="card">
     <div class="card-body">
     <h5 class="card-title"><h1 class="text-center">Portfolio </h1></h5>
@@ -246,10 +256,14 @@
       </form>
     </div>
   </div>
-  <app-portfoliomeone *ngIf="form5.valid" [data]="form5.value"></app-portfoliomeone>
+  <app-portfoliomeone *ngIf="test5 && one===1" [data]="form5.value"></app-portfoliomeone>
+  <app-portfoliometwo  *ngIf="test5 && one===2" [data]="form5.value"></app-portfoliometwo>
+
 </div>
-<div *ngIf="form5.valid">
-  <app-contactmeone></app-contactmeone>
+<div >
+  <app-contactmeone *ngIf="test5 && one===1"></app-contactmeone>
+  <app-contactmeone *ngIf="test5 && one===2"></app-contactmeone>
+
 </div>
 
-<button class="btn btn-success" (click)="sendData()" >Go To Portfolio </button>
+<button *ngIf="test5" class="btn btn-success" (click)="sendData()" >Go To Portfolio </button>
