@@ -1,0 +1,117 @@
+
+<div class="resume-box" id="w">
+	<div class="left-section">
+		<div class="profile">
+			<img [src]="data1.header.picture" class="profile-img">
+			<div class="blue-box"></div>
+		</div>
+		<h2 class="name">{{data1.header.title}}</h2>
+		<p class="n-p">{{data1.header.role}}</p>
+
+		<div class="info">
+			<p class="heading">Info</p>
+			<p class="p1"><span class="span1"></span>Address<span><br>{{data1.about.address}}</span></p>
+			<p class="p1"><span class="span1"></span>Phone<span><br>{{data1.about.phone}}</span></p>
+			<p class="p1"><span class="span1"></span>Email<span><br>{{data1.about.email}}</span></p>
+			<p class="p1"><span class="span1"></span>Age<span><br>{{data1.about.age}}</span></p>
+			<p class="p1"><span class="span1"></span>Language<span><br>{{data1.about.language}}</span></p>
+
+		</div>
+
+		<div class="info">
+			<p class="heading">Social</p>
+			<p class="p1"><span class="span1"></span>Github<span><br>{{data1.header.link}}</span></p>
+
+		</div>
+
+	</div>
+
+	<div class="right-section">
+		<div class="right-heading">
+						<p class="p2">Profile</p>
+
+		</div>
+		<p class="p3">
+			{{data1.about.description}}
+		</p>
+		<div class="clearfix"></div>
+		<br><br>
+		<div class="right-heading">
+			
+			<p class="p2">Work Experience</p>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="lr-box" *ngFor="let item of data1.experience">
+			<div class="left">
+				<p class="p4">{{item.dated}} - {{item.datef}}</p>
+			</div>
+			<div class="right">
+				<p class="p4">{{item.title}}</p>
+				<p class="p5">{{item.description}}</p>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		
+
+		
+
+		<div class="right-heading">
+			
+			<p class="p2">Education</p>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="lr-box" *ngFor="let item of data1.education">
+			<div class="left" >
+				<p class="p4">{{item.dated1}} - {{item.datef1}}</p>
+			</div>
+			<div class="right">
+				<p class="p4">{{item.title1}}</p>
+				<p class="p5">{{item.description1}}</p>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		
+
+
+
+
+		<div class="right-heading">
+			
+			<p class="p2">Skill</p>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="s-box" *ngFor="let item of data1.skills">
+			<p class="p6">{{item.skills}}</p>
+			<div >{{item.level}}%</div>
+				
+		</div>
+		
+		<!-- <div class="clearfix"></div>
+		<br>
+		<div class="right-heading">
+			<img src="hobby.png">
+			<p class="p2">Hobby &  Internet</p>
+		</div>
+		<div class="clearfix"></div>
+		<img src="image/bicycle.png" class="h-img">
+		<img src="image/games.png" class="h-img">
+		<img src="image/book.png" class="h-img">
+		<img src="image/design.png" class="h-img">
+		<img src="image/chess.png" class="h-img"> -->
+
+		</div>
+
+
+		<div class="clearfix"></div>
+	</div>
+	<div style="display: flex;justify-content: center;">
+
+		<button style="width: 160px;height: 40px; color: rgb(14, 179, 14); border: 0;border-radius: 5;font-size: x-large;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"  (click)="cv()"><b>download cv</b></button>
+	</div>
